@@ -1,4 +1,4 @@
-# Curso `Angular De Cero A Experto` con el profesor Fernando Herrera.
+# Curso `Astro: El framework para sitios web orientados al contenido` con el profesor Fernando Herrera.
 
 <p align="center">
   <a href="https://angular.dev/" target="blank"><img src="./astro-logo.svg" width="50%" /></a>
