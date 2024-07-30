@@ -1,0 +1,30 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+//? Servcer Only
+const name = "Javat Ibarra";
+---
+
+<MainLayout title="Index Page">
+  <h1>{name}</h1>
+
+  <p>Momento Actual: {new Date().toLocaleTimeString()}</p>
+  <p id="current-time">
+    Momento Actual Real: {new Date().toLocaleTimeString()}
+  </p>
+
+  <footer>Año: 2023</footer>
+
+  <script>
+    // Client Only
+    const momentoActual = document.getElementById(
+      "current-time"
+    ) as HTMLElement;
+    const footer = document.querySelector("footer") as HTMLElement;
+
+    const currentYear: number = new Date().getFullYear();
+
+    footer.innerHTML = `Año: ${currentYear}`;
+    momentoActual.innerHTML = `Momento Actual Real: ${new Date().toLocaleTimeString()}`;
+  </script>
+</MainLayout>
