@@ -7,6 +7,7 @@ import type {
   PokemonListResponse,
   Result,
 } from "@interfaces/pokemon-list.response";
+import Title from "@components/shared/Title.astro";
 
 interface Props {
   page: Page<Result>;
@@ -23,8 +24,7 @@ const { page } = Astro.props;
 ---
 
 <MainLayout title="Home">
-  <h1 class="text-3xl">Listado de Pokémons</h1>
-  <hr />
+  <Title>Listado Paginado</Title>
 
   <section
     aria-label="Listado de Pokémons"
