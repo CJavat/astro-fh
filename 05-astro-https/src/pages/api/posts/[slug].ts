@@ -80,6 +80,7 @@ export const DELETE: APIRoute = async ({ params, request }) => {
   );
 };
 
+//? Se usa en dado caso de que no se use el prerender = false
 // export const getStaticPaths: GetStaticPaths = async () => {
 //   return [
 //     {
