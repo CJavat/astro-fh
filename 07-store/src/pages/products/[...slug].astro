@@ -36,7 +36,8 @@ const { images, product } = data;
         <button class="btn-quantity">+</button>
       </div>
 
-      <button class="mt-5 bg-blue-500 text-white p-3 w-full"
+      <button
+        class="mt-5 bg-blue-500 text-white p-3 w-full disabled:bg-gray-500"
         >Añadir al carrito</button
       >
 
@@ -49,7 +50,10 @@ const { images, product } = data;
 </MainLayout>
 
 <script>
+  import { CartCookiesClient } from "@/utils";
+
   const sizeElements = document.querySelectorAll("li");
+
   sizeElements.forEach((liElement) => {
     liElement.addEventListener("click", () => {
       sizeElements.forEach((s) => s.classList.remove("selected-size"));
@@ -81,13 +85,16 @@ const { images, product } = data;
     if (!size) return alert("Selecciona una talla");
 
     addToCartButton.disabled = true;
-    
-    console.log({
-      id: productIdInput.value,
+
+    CartCookiesClient.addItem({
+      productId: productIdInput.value,
       size: size,
-      quantity: quantity
+      quantity: quantity,
     });
-});
+
+    //TODO: Cambiar cuando tengamos los viewTransition
+    window.location.href = "/cart";
+  });
 </script>
 
 <style>
