@@ -9,3 +9,5 @@
 5. Correr el proyecto `npm run dev`
 
 <!-- https://swiperjs.com/ -->
+<!-- https://docs.astro.build/en/guides/astro-db/#astro-studio -->
+<!-- https://docs.astro.build/en/guides/astro-db/ -->
